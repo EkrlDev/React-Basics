@@ -1,5 +1,12 @@
 class Hello extends React.Component {
+
+    static defaultProps = {
+        from: 'Anonymous',
+        bangs: 3
+    }
+
     render () {
+
         let bangs = '!'.repeat(this.props.bangs);
         return (
             <div>
