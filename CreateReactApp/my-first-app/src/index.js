@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import foods from './Foods';
 import {Choice, Remove} from './Helpers';
+import juice from './juice.jpg';
+import './index.css';
 
 //Randomly draw a fruit from the array
 let fruit = Choice(foods);
@@ -20,11 +22,12 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="App">
        <p>I’d like one {fruit}, please.</p>
        <p>Here you go: {fruit}</p>
        <p>Delicious! May I have another?</p>
        <p>`I’m sorry, we’re all out. We have {remainingFruits} left.</p>
+       <img className="Juice" src={juice} />
       </div>
     );
   }
