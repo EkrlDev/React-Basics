@@ -1,8 +1,9 @@
+import './Die.css';
 
 function Die(props) {
     return (
         <div>
-            <i className={`fas fa-dice-${props.num}`}></i>
+            <i className={`Die fas fa-dice-${props.num} ${props.rolling && 'shaking'}`}></i>
         </div>
     )
 }
