@@ -3,6 +3,14 @@ import Pokedex from './Pokedex';
 
 class Pokegame extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            account: 500,
+            rekt: false
+        }
+    }
+
     static defaultProps = {
         pokemon: [
             {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
@@ -15,12 +23,13 @@ class Pokegame extends Component {
             {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
           ]
     };
-     
-    render() {
 
+
+    render() {
+        
         const hand1 = [];
         const hand2 = [...this.props.pokemon];
-        
+        let account = this.state.account;
 
         while (hand1.length < hand2.length) {
             let randidx = Math.floor(Math.random() * hand2.length);
@@ -31,10 +40,13 @@ class Pokegame extends Component {
         const exp1 = hand1.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
         const exp2 = hand2.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
 
+
         return (
             <div>
-                <Pokedex pokemon = {hand1} exp = {exp1} isWinner = {exp1 > exp2} who="PEPE"/>
+                <Pokedex pokemon = {hand1} exp = {exp1} isWinner = {exp2 < exp1} who="PEPE"/>
                 <Pokedex pokemon = {hand2} exp = {exp2} isWinner = {exp2 > exp1} who="YOU"/>
+                <p className="Pokedex">Your Balance: {this.state.account}</p>
+                
             </div>
 
         )
