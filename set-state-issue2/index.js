@@ -21,7 +21,7 @@ class StateClicker extends React.Component {
   constructor(props) {
     super(props),
     this.state = {
-      icons:[]
+      icons:["bone"]
     }
   }
 
@@ -29,15 +29,14 @@ class StateClicker extends React.Component {
     let idx = Math.floor(Math.random() * this.props.options.length);
     let randIcon = this.props.options[idx];
     this.setState({icons: [...this.state.icons, randIcon]});
-    console.log(this.state.icons);
   }
 
   render() {
-
+      const icons = this.state.icons.map(icn => <i className={`fas fa-${icn}`} />);
+      console.log(icons);
       return (
         <div>
-          
-         
+          <h1>Icons: {icons}</h1>
           <button onClick={this.addIcon}>Add Icon</button>
         </div>
         );  
