@@ -44,7 +44,7 @@ class Flip extends React.Component {
             <section className='Flipper'>
                 <Coin side={this.state.face}/>
                 <button onClick={this.handleClick}>Flip Me</button>
-                <p>{`Out of ${this.state.totalFlip} flips, there have been ${this.state.head} Heads and ${this.state.tail} Tails`}</p>
+                <p>Out of {this.state.totalFlip} flips, there have been {this.state.head} Heads and {this.state.tail} Tails</p>
             </section>
             
         )
