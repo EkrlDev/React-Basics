@@ -19,7 +19,7 @@ class Box extends React.Component {
 
     render () {
         return (
-            <div onClick={this.handleClick} className="box" style={{ backgroundColor: this.state.color }}>
+            <div onMouseEnter={this.handleClick} className="box" style={{ backgroundColor: this.state.color }}>
                 
             </div>
         )
