@@ -1,0 +1,22 @@
+.App {
+    text-align: center;
+  }
+  
+
+
+.Flipper {
+  border: 2px solid grey;
+  padding: 1em 0 2em 0;
+  text-align: center;
+  margin: 1em auto auto;
+  border-radius: 10px;
+  width: 40em
+}
+
+.Flipper button {
+  background-color: darkgreen;
+  color: white;
+  border-radius: 10px;
+  margin-left: 1em;
+  margin-top: 1em;
+}
