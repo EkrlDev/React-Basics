@@ -8,19 +8,16 @@ class NumberList extends React.Component {
         }
     }
 
-    removeItem = (num) => {
-        this.setState({numbers: this.state.numbers.filter(n=> n !== num)})
+    removeNumber = (num) => {
+        this.setState({numbers: this.state.numbers.filter(n => n !== num)})
     }
 
-
-    
-    render () {
-        const nums = this.state.numbers.map(n => <NumberItem value={n} remove={this.removeItem}/>)
+    render() {
+        const nums = this.state.numbers.map(n => <NumberItem value={n} removeNumber={this.removeNumber} />)
         return (
-            <div className='Flipper'>
-                {nums}
+            <div className="Flipper">
+               {nums} 
             </div>
-            
         )
     }
 }

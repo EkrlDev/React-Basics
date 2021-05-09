@@ -1,16 +1,16 @@
 class NumberItem extends React.Component {
 
-
-    handleClick = () => {
-        this.props.remove(this.props.value)
-    }
+handleRemoveNumber = () => {
+    this.props.removeNumber(this.props.value);
+}
+    
 
     render () {
         return (
-            <li >
+            <div>
                 {this.props.value}
-                <button onClick={this.handleClick}>X</button>
-            </li>
+                <button onClick={this.handleRemoveNumber}>X</button>
+            </div>
         )
     }
 }
