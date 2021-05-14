@@ -13,7 +13,7 @@ class NumberList extends React.Component {
     }
 
     render() {
-        const nums = this.state.numbers.map(n => <NumberItem value={n} removeNumber={this.removeNumber} />)
+        const nums = this.state.numbers.map((n) => (<NumberItem key={n} value={n} removeNumber={this.removeNumber} />));
         return (
             <div className="Flipper">
                {nums} 
