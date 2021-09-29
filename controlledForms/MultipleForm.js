@@ -31,13 +31,16 @@ class MultipleForm extends React.Component {
                     <table className="table">
                         <td>
                             <tr>
-                                <input name="userName" onChange={this.handleChange} value={this.state.userName}></input>
+                                <label htmlFor="userName">Name: </label>
+                                <input id="userName" name="userName" onChange={this.handleChange} placeholder="Name" value={this.state.userName}></input>
                             </tr>
                             <tr>
-                                <input name="email" onChange={this.handleChange} value={this.state.email}></input>
+                                <label htmlFor="email">E-mail: </label>
+                                <input id="email" name="email" onChange={this.handleChange} placeholder="E-mail" value={this.state.email}></input>
                             </tr>
                             <tr>
-                                <input name="address" onChange={this.handleChange} value={this.state.address}></input>
+                                <label htmlFor="note">Note: </label>
+                                <input id="note" name="address" onChange={this.handleChange} placeholder="Note" value={this.state.address}></input>
                             </tr>
                         
                         </td>

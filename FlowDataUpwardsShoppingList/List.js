@@ -1,4 +1,6 @@
 
+
+
 class List extends React.Component {
     
     constructor(props) {
@@ -24,7 +26,7 @@ class List extends React.Component {
         return (
             <ul>
                 {this.state.items.map(item =>
-                    <li>{item.name} : {item.qty}</li>)}
+                    <li key={item.index}>{item.name} : {item.qty}</li>)}
 
             </ul>
         )

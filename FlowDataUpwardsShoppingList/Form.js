@@ -33,7 +33,7 @@ class Form extends React.Component {
                     <table className="table">
                         <td>
                             <tr>
-                                <label for="name">Name:</label>
+                                <label htmlFor="name">Name:</label>
                                 <input 
                                     placeholder="Name"
                                     id="name" 
@@ -42,7 +42,7 @@ class Form extends React.Component {
                                     value={this.state.name}></input>
                             </tr>
                             <tr>
-                                <label for="quantity">Quantity:</label>
+                                <label htmlFor="quantity">Quantity:</label>
                                 <input 
                                     placeholder="Quantity"
                                     id="quantity"  
