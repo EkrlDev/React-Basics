@@ -14,9 +14,9 @@ class NewTodoForm extends Component {
         this.setState({[evt.target.name]: evt.target.value})
     }
 
-    handleClick = (evt) => {
+    handleSubmit = (evt) => {
         evt.preventDefault();
-        const newTodo = {...this.state, id: uuidv4()}
+        const newTodo = {...this.state, id: uuidv4(), editMod: false, done:false}
         this.props.addTodo(newTodo)
         this.setState({
             todo: ""
@@ -36,7 +36,7 @@ class NewTodoForm extends Component {
                     onChange={this.handleChange}>
                 </input>      
                                     
-                <button onClick={this.handleClick}>ADD TODO</button>
+                <button>ADD TODO</button>
                 
                 </form>
             </div>
