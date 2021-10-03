@@ -22,8 +22,6 @@ class EditedTodoForm extends Component {
             <div>
                 <form onSubmit={this.handleSubmit} className="TodoForm">
                         <input 
-                            id="todo" 
-                            name="todo"
                             defaultValue={this.state.todo} 
                             onChange={this.handleChange}>
                         </input>      
