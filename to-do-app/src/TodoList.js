@@ -22,7 +22,7 @@ class TodoList extends Component {
     doneTodo = (id) => {
         this.setState({todos: [...this.state.todos.map(todo => {
             if(todo.id === id) {
-                todo.done = !todo.done;
+                return {...todo, done: !todo.done}
             }
             return todo;
         })]})
