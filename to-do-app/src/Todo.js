@@ -33,7 +33,7 @@ class Todo extends Component {
         let result;
         if (this.state.isEditing === false) {
            result = (<div className="Todo">
-                        <p className={this.props.state ? "Done": ""}>{this.props.todo}</p>
+                        <p className={this.props.isCompleted ? "Done": ""}>{this.props.todo}</p>
                         <button className="done" onClick={() => this.props.doneTodo(this.props.id)}>Done</button>
                         <button className="edit" onClick={this.editTodo}>Edit</button>
                         <button className="delete" onClick={() => this.props.removeTodo(this.props.id)}>Delete</button>

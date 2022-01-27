@@ -50,7 +50,7 @@ class TodoList extends Component {
                 id={todo.id}
                 removeTodo={this.removeTodo}
                 doneTodo = {this.doneTodo}
-                state={todo.done}
+                isCompleted={todo.done}
                 change ={this.changeTodo}
             /> 
         )
