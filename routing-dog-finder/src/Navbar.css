@@ -1,0 +1,5 @@
+.Navbar{
+    display: block;
+    justify-content: flex-end;
+    background: darkslategray;
+    padding:1rem}
