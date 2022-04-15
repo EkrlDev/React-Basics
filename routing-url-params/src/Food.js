@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 
 
@@ -9,7 +9,8 @@ export default function Food() {
         console.log('params:',params);
         return (
             <div>
-                <h1>I like eating {params.name}</h1>
+                {/\d/.test(params.name) ? <Navigate to='/foodsearch' /> : <h1>I like eating {params.name}</h1> }
+                
                 <img src={url} alt={params.name} />
             </div>
         );
