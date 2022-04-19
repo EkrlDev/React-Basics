@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import './DogDetails.css';
 
 
@@ -8,8 +8,11 @@ export default function DogDetails(props) {
 
     let params = useParams();
     const dogs = props.dogs;
+    let navigate = useNavigate();
 
-    
+    function handleGoBack() {
+        navigate(-1);
+      };
     
      let Dog = dogs.map(dog =>{
         if(params.name === dog.name)
@@ -26,7 +29,7 @@ export default function DogDetails(props) {
                                     {dog.facts.map((fact, i) =><li className='list-group-item' key={i}>{fact}</li>)}
                                 </ul>
                                 <div className='card-body'>
-                                    <Link to='/dogs' className='btn btn-info'>GO BACK</Link>
+                                    <button onClick={handleGoBack} className='btn btn-info'>GO BACK</button>
                                 </div>
                             </div>
                         </div>

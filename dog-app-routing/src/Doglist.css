@@ -1,3 +1,9 @@
 .Dog img {
     width: 75%;
+    filter: grayscale();
+    border-radius: 10px;
+}
+
+.Dog:hover img {
+    filter: none;
 }
